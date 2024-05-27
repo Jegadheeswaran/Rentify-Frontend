@@ -2,14 +2,14 @@ import React, { useEffect, useState } from 'react';
 import PropertyDetails from '../components/PropertyDetails';
 import axios from 'axios';
 
-const baseUrl = 'https://rentify-backend-livid-chi.vercel.app/';
+const baseUrl = '';
 
 const Dashboard = () => {
   const [properties, setProperties] = useState([]);
 
   useEffect(() => {
     
-    axios.get(`${baseUrl}/allproperties`)
+    axios.get(`https://rentify-backend-livid-chi.vercel.app/allproperties`)
       .then(response => {
         setProperties(response.data);
       })

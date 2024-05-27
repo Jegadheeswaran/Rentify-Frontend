@@ -23,7 +23,7 @@ const Signup = () => {
     e.preventDefault();
 
     try {
-      const response = await axios.post(`${baseUrl}/signup`, formData);
+      const response = await axios.post(`https://rentify-backend-livid-chi.vercel.app/signup`, formData);
       console.log('Signup response:', response.data);
       navigate("/");
     } catch (error) {
